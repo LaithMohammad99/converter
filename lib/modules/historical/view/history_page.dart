@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
-import 'package:taske_bloc_converte/model/historcal_model.dart'; // Import fl_chart package
+import 'package:taske_bloc_converte/model/historcal_model.dart';
 
 class HistoricalView extends StatelessWidget {
   const HistoricalView({super.key});
@@ -21,14 +21,13 @@ class HistoricalView extends StatelessWidget {
             Expanded(
               child: LineChart(
                 LineChartData(
-                  gridData: const FlGridData(show: false),
+                  gridData: const FlGridData(show: true),
                   titlesData: FlTitlesData(
                     bottomTitles: AxisTitles(
                       sideTitles: SideTitles(
                         showTitles: true,
                         reservedSize: 40,
                         interval: 1,
-                        // Use `getTitlesWidget` to display the titles
                         getTitlesWidget: (value, meta) {
                           final date = usdToJod[value.toInt()].date;
                           return SideTitleWidget(
@@ -46,7 +45,6 @@ class HistoricalView extends StatelessWidget {
                         showTitles: true,
                         reservedSize: 40,
                         interval: 0.5,
-                        // Use `getTitlesWidget` to display the titles
                         getTitlesWidget: (value, meta) {
                           return SideTitleWidget(
                             axisSide: meta.axisSide,
