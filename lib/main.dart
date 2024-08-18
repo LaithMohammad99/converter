@@ -12,7 +12,7 @@ final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 void main() {
   setupLocator("https://free.currconv.com/");
-  runApp(const MyApp());
+  runApp(const MyApp() );
 }
 
 class MyApp extends StatelessWidget {
