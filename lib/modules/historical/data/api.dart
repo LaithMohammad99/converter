@@ -6,6 +6,7 @@ import 'package:taske_bloc_converte/model/exchange_rate_model.dart';
 
 class HistoricalAPI {
   final http.Client? client;
+  int index=0;
 
   HistoricalAPI({this.client});
   Future<Map<String, List<ExchangeRateModel>>> fetchExchangeRates(

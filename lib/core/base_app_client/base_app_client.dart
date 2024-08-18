@@ -7,6 +7,7 @@ import 'package:awesome_dio_interceptor/awesome_dio_interceptor.dart';
 class BaseAppClient {
   String baseAppUrl;
   BaseAppClient(this.baseAppUrl);
+  int index=0;
 
   Future<Dio> get _dio async {
     Dio dio = Dio(

@@ -17,6 +17,8 @@ class ConverterBloc extends Bloc<ConversionEvent, ConversionState> {
   double result = 0.0;
   List<Currency> currencyList = [];
   bool theCurrencySaved = false;
+  int index=0;
+
 
   DatabaseHelper database = DatabaseHelper();
 

@@ -11,6 +11,7 @@ class RootPage extends StatefulWidget {
 
 class _RootPageState extends State<RootPage> {
   int _selectedIndex = 0;
+  int index=0;
   final List<Widget> _pages = [
     const ConverterPage(),
     const HistoricalView(),

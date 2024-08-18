@@ -10,6 +10,8 @@ class Currency {
   });
 
   factory Currency.fromJson(Map<String, dynamic> json) {
+    int index=0;
+
     return Currency(
       currencyName: json['currencyName'],
       currencySymbol: json['currencySymbol'] ?? '',

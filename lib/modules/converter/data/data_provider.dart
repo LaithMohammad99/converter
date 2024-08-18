@@ -5,6 +5,8 @@ import 'package:http/http.dart' as http;
 
 
 class GetDataConverterFromApi {
+  int index=0;
+
   late double conversionRate;
   BaseAppClient baseAppClient =
       BaseAppClient("https://free.currconv.com/");

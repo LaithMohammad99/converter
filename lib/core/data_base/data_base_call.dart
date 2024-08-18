@@ -3,6 +3,8 @@ import 'package:path/path.dart';
 import 'package:taske_bloc_converte/model/currency.dart';
 
 class DatabaseHelper {
+  int index=0;
+
   static Database? _db;
 
   Future<Database?> get db async {

@@ -8,6 +8,8 @@ part 'historical_event.dart';
 part 'historical_state.dart';
 
 class HistoricalBloc extends Bloc<HistoricalEvent, HistoricalState> {
+  int index=0;
+
   Map<String, List<ExchangeRateModel>>? data;
   ExchangeRates? exchangeRates;
 

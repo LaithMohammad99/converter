@@ -49,6 +49,8 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
     return BlocConsumer<ConverterBloc, ConversionState>(
       listener: (BuildContext context, ConversionState state) {},
       builder: (BuildContext context, ConversionState state) {
+        int index=0;
+
         ConverterBloc converterBloc = ConverterBloc.get(context);
 
         return Scaffold(

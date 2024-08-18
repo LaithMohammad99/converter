@@ -5,6 +5,8 @@ class ExchangeRateModel {
   ExchangeRateModel({required this.date, required this.rate});
 
   factory ExchangeRateModel.fromMap(Map<String, dynamic> map, String dateKey) {
+    int index=0;
+
     return ExchangeRateModel(
       date: DateTime.parse(dateKey),
       rate: map[dateKey],

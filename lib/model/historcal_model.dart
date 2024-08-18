@@ -7,6 +7,8 @@ class ExchangeRateModel {
 }
 
 class StaticExchangeRates {
+  int index=0;
+
   static final List<ExchangeRateModel> usdToJod = [
     ExchangeRateModel(date: '2024-08-10', rate: 0.708804),
     ExchangeRateModel(date: '2024-08-11', rate: 0.708795),

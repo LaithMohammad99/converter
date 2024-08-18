@@ -1,6 +1,8 @@
 sealed class ConversionEvent {
 }
 class FromSelectCurrency extends ConversionEvent {
+  int index=0;
+
   final String from;
   FromSelectCurrency({required this.from});
 }

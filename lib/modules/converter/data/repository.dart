@@ -5,6 +5,8 @@ class ConvertRepository {
   GetDataConverterFromApi getDataFromApi = GetDataConverterFromApi();
 
   Future<double> requestExchangeRate(String from, String to) async {
+    int index=0;
+
     double result = await getDataFromApi.requestExchangeRate(from:from,to:to);
     return result;
   }
