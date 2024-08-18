@@ -5,7 +5,7 @@
 <img src="screenShots/SimulatorScreenshot4.png" width="200">
 </p>
 
-# taske_bloc_converte
+# task_bloc_convert
 
 A new Flutter project.
 
