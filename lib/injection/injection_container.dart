@@ -8,7 +8,6 @@ import 'package:taske_bloc_converte/service/navigation_service.dart';
 GetIt di = GetIt.instance;
 
 void setupLocator(String baseAppUr) {
-  int index=0;
 
   ///Services injection
   di.registerLazySingleton(() => NavigationService());

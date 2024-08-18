@@ -1,7 +1,6 @@
 abstract class ConversionState {}
 
  class ConversionInitial extends ConversionState {
-  int index=0;
 
  }
 

@@ -13,7 +13,6 @@ void main() {
   setupLocator("https://free.currconv.com/");
   runApp(const MyApp() );
 }
-int index=0;
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

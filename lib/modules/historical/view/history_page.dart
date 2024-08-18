@@ -9,7 +9,6 @@ class HistoricalView extends StatelessWidget {
   Widget build(BuildContext context) {
     final List<ExchangeRateModel> usdToJod = StaticExchangeRates.usdToJod;
     final List<ExchangeRateModel> jodToUsd = StaticExchangeRates.jodToUsd;
-    int index=0;
 
     return Scaffold(
       appBar: AppBar(

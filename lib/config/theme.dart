@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:taske_bloc_converte/config/colors.dart';
 
-int index=0;
 
 ThemeData lightTheme() => ThemeData(
   textSelectionTheme: TextSelectionThemeData(
