@@ -4,7 +4,6 @@ import 'package:taske_bloc_converte/modules/historical/data/api.dart';
 import '../../../utils/date.dart';
 
 class HistoricalRepository {
-  int index=0;
 
   final HistoricalAPI historicalAPI = HistoricalAPI();
 
