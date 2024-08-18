@@ -12,6 +12,7 @@ class HistoricalBloc extends Bloc<HistoricalEvent, HistoricalState> {
   Map<String, List<ExchangeRateModel>>? data;
   ExchangeRates? exchangeRates;
 
+
   HistoricalRepository historicalRepository = HistoricalRepository();
 
   HistoricalBloc() : super(HistoricalInitial()) {
