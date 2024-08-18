@@ -67,7 +67,7 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
                         keyboardType: TextInputType.number,
                         onChanged: (value) {
                           _amount = double.tryParse(value) ?? 0.0;
-                        },
+                        } ,
                       ),
                       const SizedBox(height: 20),
                       Row(
