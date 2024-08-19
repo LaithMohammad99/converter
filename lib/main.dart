@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taske_bloc_converte/config/theme.dart';
-import 'package:taske_bloc_converte/injection/injection_container.dart';
+import 'package:taske_bloc_converte/core/injection/injection_container.dart';
 import 'package:taske_bloc_converte/modules/converter/Bloc/bloc.dart';
 import 'package:taske_bloc_converte/modules/converter/Bloc/events.dart';
 import 'package:taske_bloc_converte/modules/historical/bloc/historical_bloc.dart';

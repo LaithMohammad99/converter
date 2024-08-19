@@ -1,6 +1,6 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
-import 'package:taske_bloc_converte/model/currency.dart';
+import 'package:taske_bloc_converte/core/model/currency.dart';
 
 class DatabaseHelper {
 

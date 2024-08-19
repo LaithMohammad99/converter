@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taske_bloc_converte/model/currency.dart';
+import 'package:taske_bloc_converte/core/model/currency.dart';
 
 class CurrencyDropdownWidget extends StatelessWidget {
   final Currency? selectedCurrency;

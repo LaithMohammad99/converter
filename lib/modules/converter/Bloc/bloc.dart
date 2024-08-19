@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:taske_bloc_converte/config/shared_pref_kay.dart';
+import 'package:taske_bloc_converte/core/config/shared_pref_kay.dart';
+import 'package:taske_bloc_converte/core/model/currency.dart';
 import 'package:taske_bloc_converte/modules/converter/Bloc/events.dart';
 import 'package:taske_bloc_converte/modules/converter/Bloc/states.dart';
 import 'package:taske_bloc_converte/modules/converter/data/repository.dart';
 import 'package:taske_bloc_converte/utils/app_shared_preferences.dart';
 import 'package:taske_bloc_converte/core/data_base/data_base_call.dart';
-import 'package:taske_bloc_converte/model/currency.dart';
 
 class ConverterBloc extends Bloc<ConversionEvent, ConversionState> {
   ConvertRepository convertRepository = ConvertRepository();
