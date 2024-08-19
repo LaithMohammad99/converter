@@ -1,8 +1,8 @@
 import 'dart:convert';
 import 'package:taske_bloc_converte/core/base_app_client/base/base_services.dart';
 import 'package:taske_bloc_converte/core/base_app_client/base_app_client.dart';
-import 'package:taske_bloc_converte/model/currency.dart';
 import 'package:http/http.dart' as http;
+import 'package:taske_bloc_converte/core/model/currency.dart';
 
 
 class GetDataConverterFromApi extends BaseService {

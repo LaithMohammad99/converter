@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fl_chart/fl_chart.dart';
-import 'package:taske_bloc_converte/model/historcal_model.dart';
+import 'package:taske_bloc_converte/core/model/historcal_model.dart';
 
 class HistoricalView extends StatelessWidget {
   const HistoricalView({super.key});

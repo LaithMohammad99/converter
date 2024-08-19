@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:taske_bloc_converte/injection/injection_container.dart';
-import 'package:taske_bloc_converte/model/currency.dart';
+import 'package:taske_bloc_converte/core/model/currency.dart';
 import 'package:taske_bloc_converte/modules/converter/Bloc/bloc.dart';
 import 'package:taske_bloc_converte/modules/converter/Bloc/events.dart';
 import 'package:taske_bloc_converte/modules/converter/Bloc/states.dart';

@@ -1,4 +1,4 @@
-import 'package:taske_bloc_converte/model/currency.dart';
+import 'package:taske_bloc_converte/core/model/currency.dart';
 import 'package:taske_bloc_converte/modules/converter/data/data_provider.dart';
 
 class ConvertRepository {

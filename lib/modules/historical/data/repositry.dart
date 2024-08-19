@@ -1,4 +1,4 @@
-import 'package:taske_bloc_converte/model/exchange_rate_model.dart';
+import 'package:taske_bloc_converte/core/model/exchange_rate_model.dart';
 import 'package:taske_bloc_converte/modules/historical/data/api.dart';
 
 import '../../../utils/date.dart';

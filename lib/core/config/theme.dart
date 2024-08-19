@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:taske_bloc_converte/config/colors.dart';
+import 'package:taske_bloc_converte/core/config/colors.dart';
 
 
 ThemeData lightTheme() => ThemeData(

@@ -1,8 +1,8 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:taske_bloc_converte/core/model/exchange_rate_model.dart';
 import 'package:taske_bloc_converte/utils/date.dart';
-import 'package:taske_bloc_converte/model/exchange_rate_model.dart';
 
 class HistoricalAPI {
   final http.Client? client;
