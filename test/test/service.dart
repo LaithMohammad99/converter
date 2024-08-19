@@ -46,7 +46,7 @@ void main() {
       final client = MockClient();
       final repository = ExchangeRateRepository(client);
 
-      when(client.get(any)).thenAnswer(
+      when(client.get(Uri())).thenAnswer(
             (_) async => http.Response('Not Found', 404),
       );
 
