@@ -1,18 +1,17 @@
 import 'dart:convert';
+import 'package:taske_bloc_converte/core/base_app_client/base/base_services.dart';
 import 'package:taske_bloc_converte/core/base_app_client/base_app_client.dart';
 import 'package:taske_bloc_converte/model/currency.dart';
 import 'package:http/http.dart' as http;
 
 
-class GetDataConverterFromApi {
+class GetDataConverterFromApi extends BaseService {
 
   late double conversionRate;
-  BaseAppClient baseAppClient =
-      BaseAppClient("https://free.currconv.com/");
 
   Future<double> requestExchangeRate(
       {required String from, required String to}) async {
-    await baseAppClient.get(
+    await appClient.get(
         "api/v7/convert?q=${from.toUpperCase()}_${to.toUpperCase()}&compact=ultra&apiKey=a593c9f332b2f8c7af2e",
         onSuccess: (dynamic response, int? statusCode) {
       conversionRate = double.parse(response["${from.toUpperCase()}_${to.toUpperCase()}"].toString());
