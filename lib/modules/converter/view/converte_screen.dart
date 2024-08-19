@@ -5,7 +5,7 @@ import 'package:taske_bloc_converte/model/currency.dart';
 import 'package:taske_bloc_converte/modules/converter/Bloc/bloc.dart';
 import 'package:taske_bloc_converte/modules/converter/Bloc/events.dart';
 import 'package:taske_bloc_converte/modules/converter/Bloc/states.dart';
-
+import 'package:taske_bloc_converte/widget/currency_dropdown_widget.dart';
 
 class ConverterPage extends StatefulWidget {
   const ConverterPage({super.key});
@@ -49,7 +49,6 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
     return BlocConsumer<ConverterBloc, ConversionState>(
       listener: (BuildContext context, ConversionState state) {},
       builder: (BuildContext context, ConversionState state) {
-
         ConverterBloc converterBloc = ConverterBloc.get(context);
 
         return Scaffold(
@@ -68,54 +67,37 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
                         keyboardType: TextInputType.number,
                         onChanged: (value) {
                           _amount = double.tryParse(value) ?? 0.0;
-                        } ,
+                        },
                       ),
                       const SizedBox(height: 20),
                       Row(
                         children: [
-                          Expanded(
-                            child: DropdownButton<Currency>(
-                              hint: Text("Select Currency"),
-                              value: _selectedFromCurrency,
-                              onChanged: (newValue) {
-                                setState(() {
-                                  _selectedFromCurrency = newValue;
-                                  _fromCurrency = newValue!.id.toString();
-                                  converterBloc.add(
-                                      FromSelectCurrency(from: _fromCurrency));
-                                });
-                              },
-                              items: converterBloc.currencyList.map((currency) {
-                                return DropdownMenuItem(
-                                  value: currency,
-                                  child: Text(currency.id.toString()),
-                                );
-                              }).toList(),
-                            ),
+                          CurrencyDropdownWidget(
+                            selectedCurrency: _selectedFromCurrency,
+                            currencyList: converterBloc.currencyList,
+                            onCurrencyChanged: (newCurrency) {
+                              setState(() {
+                                _selectedFromCurrency = newCurrency;
+                                _fromCurrency = newCurrency!.id;
+                                converterBloc
+                                    .add(FromSelectCurrency(from: _fromCurrency));
+                              });
+                            },
                           ),
                           const SizedBox(width: 16),
                           const Icon(Icons.arrow_forward),
                           const SizedBox(width: 16),
-                          Expanded(
-                            child: DropdownButton<Currency>(
-                              hint: Text("Select Currency"),
-                              value: _selectedToCurrency,
-                              onChanged: (newValue) {
-                                setState(() {
-                                  _selectedToCurrency = newValue;
-                                  _toCurrency = newValue!.id;
-                                  converterBloc
-                                      .add(ToSelectCurrency(to: _toCurrency));
-                                });
-                              },
-                              items: converterBloc.currencyList
-                                  .map((Currency currency) {
-                                return DropdownMenuItem(
-                                  value: currency,
-                                  child: Text(currency.id),
-                                );
-                              }).toList(),
-                            ),
+                          CurrencyDropdownWidget(
+                            selectedCurrency: _selectedToCurrency,
+                            currencyList: converterBloc.currencyList,
+                            onCurrencyChanged: (newCurrency) {
+                              setState(() {
+                                _selectedToCurrency = newCurrency;
+                                _toCurrency = newCurrency!.id;
+                                converterBloc
+                                    .add(ToSelectCurrency(to: _toCurrency));
+                              });
+                            },
                           ),
                         ],
                       ),
@@ -132,7 +114,8 @@ class _CurrencyConverterState extends State<CurrencyConverter> {
                                       double.parse(amountController.text),
                                     ));
                                   } else {
-                                    showCustomSnackBar(context);                                  }
+                                    showCustomSnackBar(context);
+                                  }
                                 },
                                 child: const Text('Convert'),
                               ),
@@ -169,5 +152,4 @@ void showCustomSnackBar(BuildContext context) {
       duration: Duration(seconds: 3),
     ),
   );
-
 }
